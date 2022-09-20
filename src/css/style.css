@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(184, 184, 184) 100%
+  );
+}
+
+h1 {
+  padding: 18px;
+  /*font-family: "PT Sans", sans-serif;*/
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: calc(100% - 36px);
+  position: absolute;
+  z-index: 5;
+}
+
+.main-game {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genius {
+  margin-top: 40px;
+  display: grid;
+  grid-template-areas:
+    "green red"
+    "yellow blue";
+  grid-gap: 10px;
+  background-color: black;
+  border-radius: 100%;
+  width: 80vh;
+  height: 80vh;
+  position: relative;
+}
+
+.border {
+  border: 4px solid black;
+  margin-top: -4px;
+  margin-left: -4px;
+  border-radius: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  pointer-events: none;
+}
+
+.green,
+.red,
+.blue,
+.yellow {
+  opacity: 0.7;
+}
+
+.green {
+  grid-area: green;
+  background: rgb(0, 141, 31);
+  background: linear-gradient(
+    135deg,
+    rgb(1, 77, 14) 0%,
+    rgb(7, 107, 30) 52%,
+    rgba(9, 121, 35, 1) 100%
+  );
+  border-top-left-radius: 100%;
+}
+
+.red {
+  grid-area: red;
+  background: rgb(255, 0, 13);
+  background: linear-gradient(
+    225deg,
+    rgb(97, 0, 0) 0%,
+    rgb(155, 6, 6) 52%,
+    rgb(199, 0, 0) 100%
+  );
+  border-top-right-radius: 100%;
+}
+
+.blue {
+  grid-area: blue;
+  background: rgb(11, 0, 228);
+  background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+  border-bottom-right-radius: 100%;
+}
+
+.yellow {
+  grid-area: yellow;
+  background: rgb(255, 230, 0);
+  background: linear-gradient(
+    45deg,
+    rgb(173, 157, 6) 0%,
+    rgb(183, 185, 16) 52%,
+    rgb(218, 231, 38) 100%
+  );
+  border-bottom-left-radius: 100%;
+}
+
+.center-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.center {
+  height: 35vh;
+  width: 35vh;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center img {
+  width: 80%;
+}
+
+.selected {
+  opacity: 1;
+}
